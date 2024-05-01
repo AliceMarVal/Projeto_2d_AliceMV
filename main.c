@@ -43,7 +43,7 @@ int main() {
     Producoes p[10];
 
     // Open file
-    fp = fopen("../input.txt", "r");
+    fp = fopen("./input.txt", "r");
     if (fp == NULL) {
         printf("erro ao abrir o arquivo\n");
         return 1;
