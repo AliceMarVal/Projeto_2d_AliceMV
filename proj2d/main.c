@@ -151,6 +151,10 @@ q1:
         pop();
         push('a');
         token = fgetc(fp);
+        w[len] = token;
+        len++;
+        w[len] = '\0';
+        ++cont;
         p[cont].producoes[0] = 'p';
         p[cont].producoes[1] = '4';
         ++cont;
