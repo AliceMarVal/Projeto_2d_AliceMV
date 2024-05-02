@@ -6,7 +6,7 @@
 #define arv_tam 100
 #define stack_tam 100
 
-char w[16];
+char w[50];
 int  len=0;
 
 typedef struct{
@@ -40,7 +40,7 @@ int main() {
     FILE *fp;
     char token, arv[arv_tam];
     int cont=0, i=0;
-    Producoes p[10];
+    Producoes p[50];
 
     // Open file
     fp = fopen("./input.txt", "r");
@@ -258,6 +258,7 @@ q1:
 
         pop();
         push('*');
+
         p[cont].producoes[0] = 'p';
         p[cont].producoes[1] = '9';
         token = fgetc(fp);
@@ -423,7 +424,6 @@ q1:
         printf("     s[] : ");
         for (int h=top; h>=0; h--) { printf("%c   ", stack[h]); }
         ++i;
-
         pop();
     } else if (stack[top] == '/') {
         printf("\n %2d   q1  ", i);
